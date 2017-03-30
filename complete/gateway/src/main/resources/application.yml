@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+zuul: 
+    routes:
+      eureka-server: 
+            url: http://eureka-server.apps.eu.cfdev.canopy-cloud.com/
+ribbon:
+   eureka:
+    enabled: false			
+
+security:
+  user:
+    name: eureka
+    password: changeme
+
+spring:
+  boot:
+    admin:
+      url: http://8080.apps.eu.cfdev.canopy-cloud.com
+      auth:
+        username: eureka
+        password: changeme
+  application:
+    name: eureka-server
+
+logging:
+  level:
+    org.springframework.security: INFO
+
+zuul.sensitiveHeaders:
