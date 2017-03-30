@@ -1,0 +1,15 @@
+---
+spring:
+  profiles: cloud
+  application:
+    name: customer-service
+eureka:
+  instance:
+    nonSecurePort: 80
+    hostname: eureka-server.apps.eu.cfdev.canopy-cloud.com
+
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+     defaultZone: http://eureka:changeme@eureka-server.apps.eu.cfdev.canopy-cloud.com/eureka/

@@ -1,0 +1,11 @@
+---
+applications:
+- name: customer-service
+  memory: 2040MB
+  host: eureka-server
+  path: target/customer-service-0.0.1-SNAPSHOT.jar
+  env:
+    spring.profiles.active: cloud
+  services:
+  - eureka
+
